@@ -2,7 +2,7 @@
 
 namespace LibUnderTest
 {
-    public class Class1
+    public class ClassUnderTest
     {
     }
 }
