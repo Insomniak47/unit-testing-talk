@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibUnderTest.Tests
 {
@@ -29,10 +24,10 @@ namespace LibUnderTest.Tests
             //Setup the _get
             _getterMock.Setup(x => x.GetString())
                 .Returns<string>(null);
-            var underTest = new DependencyInjection_EasyToTestSingleton(_getterMock.Object);
+            DependencyInjection_EasyToTestSingleton underTest = new DependencyInjection_EasyToTestSingleton(_getterMock.Object);
 
             //Act
-            var res = underTest.MethodUnderTest();
+            string res = underTest.MethodUnderTest();
 
             //Assert
             StringAssert.Contains(res, "7");
@@ -45,11 +40,11 @@ namespace LibUnderTest.Tests
             //Arrange
             _getterMock.Setup(x => x.GetString())
                 .Returns("");
-            
-            var underTest = new DependencyInjection_EasyToTestSingleton(_getterMock.Object);
+
+            DependencyInjection_EasyToTestSingleton underTest = new DependencyInjection_EasyToTestSingleton(_getterMock.Object);
 
             //Act
-            var res = underTest.MethodUnderTest();
+            string res = underTest.MethodUnderTest();
 
             //Assert
             StringAssert.Contains(res, "7");

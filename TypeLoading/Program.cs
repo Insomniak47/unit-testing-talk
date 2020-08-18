@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using TypeLoadingFailures;
 
 namespace TypeLoading
@@ -8,16 +7,16 @@ namespace TypeLoading
     {
         static void Main(string[] args)
         {
-            var shouldExplode = args.FirstOrDefault() == "explode";
+            bool shouldExplode = args.FirstOrDefault() == "explode";
 
             if (shouldExplode)
             {
-                var explody = new UnsuccessfulStatic();
+                UnsuccessfulStatic explody = new UnsuccessfulStatic();
                 _ = explody.Explode;
             }
             else
             {
-                var noSplody = new UnsuccessfulStatic();
+                UnsuccessfulStatic noSplody = new UnsuccessfulStatic();
             }
 
 

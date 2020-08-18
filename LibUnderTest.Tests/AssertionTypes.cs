@@ -42,7 +42,7 @@ namespace LibUnderTest.Tests
             StringAssert.EndsWith("stringwithlotsofstuff", "stuff");
             CollectionAssert.AreEqual(new List<int> { 1, 3, 5 }, new List<int> { 1, 3, 5 });
             CollectionAssert.AllItemsAreInstancesOfType(new List<Base> { new Derived(), new Derived() }, typeof(Derived));
-            
+
             //Will fail!
             //CollectionAssert.AllItemsAreInstancesOfType(new List<Base> { new Derived(), new Sibling() }, typeof(Derived));
         }

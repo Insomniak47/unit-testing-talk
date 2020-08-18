@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibUnderTest.Tests
 {
@@ -18,14 +13,14 @@ namespace LibUnderTest.Tests
 
         public string MethodUnderTest()
         {
-            var myService = new ThingDoer();
+            ThingDoer myService = new ThingDoer();
 
             //CN: How do we test the different possible conditions that come out of this?
             //  What happens when it returns null?
             //  What happens when it returns a value?
             //Since we're using a real implementation we would have to do a ton of work within that 
             //and it makes it hard to prove out *this* method (MethodUnderTest).
-            var result = myService.DoThingWithSpecialSite();
+            int? result = myService.DoThingWithSpecialSite();
 
             if (result.HasValue)
             {
@@ -34,12 +29,12 @@ namespace LibUnderTest.Tests
 
             return ":(";
         }
-        
+
     }
 
     public class DependencyInjection_HardToTestSingleton
     {
-        public  DependencyInjection_HardToTestSingleton()
+        public DependencyInjection_HardToTestSingleton()
         {
 
         }
@@ -54,7 +49,7 @@ namespace LibUnderTest.Tests
             //  When it doesn't have a '7'
             //Since we're using a static accessor style (GO4) singleton we can't inject
             //the behaviours we want to test. It makes it hard to isolate a unit
-            var stringICareAbout = GangOfFourSingleton.Instance.GetString();
+            string stringICareAbout = GangOfFourSingleton.Instance.GetString();
 
             if (stringICareAbout.Contains("7"))
             {
@@ -80,7 +75,7 @@ namespace LibUnderTest.Tests
 
         public string MethodUnderTest()
         {
-            var stringICareAbout =_stringGetter.GetString();
+            string stringICareAbout = _stringGetter.GetString();
 
             if (stringICareAbout?.Contains("7") ?? false)
             {
@@ -105,7 +100,7 @@ namespace LibUnderTest.Tests
 
         public string MethodUnderTest()
         {
-            var result = _thingDoer.DoThingWithSpecialSite();
+            int? result = _thingDoer.DoThingWithSpecialSite();
 
             if (result.HasValue)
             {
@@ -142,7 +137,7 @@ namespace LibUnderTest.Tests
         public int? DoThingWithSpecialSite()
         {
             //CN -- not good use of resources -- async!
-            var client = new HttpClient();
+            HttpClient client = new HttpClient();
 
             //Slow vs normal unit tests
             var res = client.GetAsync("https://google.ca").Result;

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LibUnderTest
+﻿namespace LibUnderTest
 {
     public class ClassUnderTest
     {
