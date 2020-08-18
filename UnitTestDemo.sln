@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibUnderTest", "LibUnderTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibUnderTest.Tests", "LibUnderTest.Tests\LibUnderTest.Tests.csproj", "{4A1EA1A3-1459-42BD-9621-923BD2CADF89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeLoading", "TypeLoading\TypeLoading.csproj", "{D2A9E599-3A10-4CB9-B4FA-F628F23E3595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeLoadingFailures", "TypeLoadingFailures\TypeLoadingFailures.csproj", "{9302F274-6840-4587-9063-396B5E3B5319}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4A1EA1A3-1459-42BD-9621-923BD2CADF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1EA1A3-1459-42BD-9621-923BD2CADF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1EA1A3-1459-42BD-9621-923BD2CADF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A9E599-3A10-4CB9-B4FA-F628F23E3595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A9E599-3A10-4CB9-B4FA-F628F23E3595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A9E599-3A10-4CB9-B4FA-F628F23E3595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A9E599-3A10-4CB9-B4FA-F628F23E3595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9302F274-6840-4587-9063-396B5E3B5319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9302F274-6840-4587-9063-396B5E3B5319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9302F274-6840-4587-9063-396B5E3B5319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9302F274-6840-4587-9063-396B5E3B5319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
