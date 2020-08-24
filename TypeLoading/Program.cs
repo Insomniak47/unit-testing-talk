@@ -18,9 +18,6 @@ namespace TypeLoading
             {
                 UnsuccessfulStatic noSplody = new UnsuccessfulStatic();
             }
-
-
-
         }
     }
 }
